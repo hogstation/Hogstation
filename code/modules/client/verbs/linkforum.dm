@@ -1,3 +1,4 @@
+/* Forum won't be used.
 /client/verb/linkforum()
 	set category = "OOC"
 	set name = "Link Forum Account"
@@ -21,3 +22,4 @@
 /client/proc/givelinkforum()
 	add_verb(src, /client/verb/linkforum)
 	to_chat(src, span_notice("Your forum verification link has expired, and the verb has been returned to you. You can ignore this if you have already linked your accounts."), confidential = TRUE)
+*/

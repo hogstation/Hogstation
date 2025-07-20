@@ -32,6 +32,7 @@ SUBSYSTEM_DEF(echelon)
 
 	if(IsAdminAdvancedProcCall()) return
 
+	/*
 	var/datum/DBQuery/query_get_cached_matches = SSdbcore.NewQuery({"
 		SELECT
 			JSON_VALUE(data, "$.should_block")
@@ -88,6 +89,10 @@ SUBSYSTEM_DEF(echelon)
 	
 
 	return json["should_block"] == "true"
+	*/
+	var/val = get_ip_intel(ip)
+	var/rating_bad = CONFIG_GET(number/ipintel_rating_bad)
+	return rating_bad < val
 		
 
 /datum/controller/subsystem/echelon/proc/is_match(ckey, ip, allow_exceptions=TRUE)

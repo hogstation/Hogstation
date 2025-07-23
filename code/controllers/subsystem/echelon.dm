@@ -103,7 +103,7 @@ SUBSYSTEM_DEF(echelon)
 /datum/controller/subsystem/echelon/proc/is_match(ckey, ip, allow_exceptions=TRUE)
 	if(!CONFIG_GET(string/vpn_lookup_api) || !CONFIG_GET(string/vpn_lookup_key))
 		return FALSE
-	if(!enabled)
+	if(!enabled || !initialized)
 		return FALSE
 	
 	if(allow_exceptions && is_exception(ckey)) return FALSE

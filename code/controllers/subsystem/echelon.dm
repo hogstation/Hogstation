@@ -5,6 +5,8 @@ SUBSYSTEM_DEF(echelon)
 	var/enabled = TRUE
 
 /datum/controller/subsystem/echelon/Initialize(timeofday, zlevel)
+	for (var/mob/user as anything in GLOB.player_list)
+		is_match(user.ckey, user.client.address)
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/echelon/proc/is_exception(ckey)

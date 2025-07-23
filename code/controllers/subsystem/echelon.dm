@@ -90,10 +90,10 @@ SUBSYSTEM_DEF(echelon)
 
 	return json["should_block"] == "true"
 	*/
-	var/val = get_ip_intel(ip)
+	var/datum/ipintel/val = get_ip_intel(ip)
 	var/rating_bad = CONFIG_GET(number/ipintel_rating_bad)
-	log_access(val, rating_bad)
-	return rating_bad < val
+	log_access(val.intel, rating_bad)
+	return rating_bad < val.intel
 		
 
 /datum/controller/subsystem/echelon/proc/is_match(ckey, ip, allow_exceptions=TRUE)

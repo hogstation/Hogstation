@@ -5,12 +5,14 @@ SUBSYSTEM_DEF(echelon)
 	var/enabled = FALSE
 
 /datum/controller/subsystem/echelon/Initialize(timeofday, zlevel)
+	log_access("ECHELON initialization started")
 	enabled = TRUE
-	var/list/clients = GLOB.clients.Copy()
-	for (var/client/C in clients)
+	for (var/client/C)
+		log_access("ECHELON: [C]")
 		if(is_match(C.ckey, C.address))
 			log_access("Player kicked: [C.key] [C.computer_id] [C.address] - Blocked due to proxy")
 			qdel(C)
+	log_access("ECHELON initialization ended")
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/echelon/proc/is_exception(ckey)

@@ -2,14 +2,15 @@ SUBSYSTEM_DEF(echelon)
 	name = "ECHELON"
 	init_order = INIT_ORDER_ECHELON
 	flags = SS_NO_FIRE
-	var/enabled = TRUE
+	var/enabled = FALSE
 
 /datum/controller/subsystem/echelon/Initialize(timeofday, zlevel)
-	. = SS_INIT_SUCCESS
+	enabled = TRUE
 	for (var/client/C as anything in GLOB.clients)
 		if(is_match(C.ckey, C.address))
 			log_access("Player kicked: [C.key] [C.computer_id] [C.address] - Blocked due to proxy")
 			qdel(C)
+	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/echelon/proc/is_exception(ckey)
 	PRIVATE_PROC(TRUE)
@@ -103,7 +104,7 @@ SUBSYSTEM_DEF(echelon)
 /datum/controller/subsystem/echelon/proc/is_match(ckey, ip, allow_exceptions=TRUE)
 	if(!CONFIG_GET(string/vpn_lookup_api) || !CONFIG_GET(string/vpn_lookup_key))
 		return FALSE
-	if(!enabled || !initialized)
+	if(!enabled)
 		return FALSE
 	
 	if(allow_exceptions && is_exception(ckey)) return FALSE

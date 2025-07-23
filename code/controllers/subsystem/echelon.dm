@@ -6,9 +6,8 @@ SUBSYSTEM_DEF(echelon)
 
 /datum/controller/subsystem/echelon/Initialize(timeofday, zlevel)
 	for (var/client/C as anything in GLOB.clients)
-		if(is_match(C.ckey, C.client.address))
+		if(is_match(C.ckey, C.address))
 			log_access("Player kicked: [C.key] [C.computer_id] [C.address] - Blocked due to proxy")
-			world.IsBanned.key_cache[C.key]
 			qdel(C)
 	return SS_INIT_SUCCESS
 

@@ -151,6 +151,7 @@
 #define INIT_ORDER_EARLY_ASSETS 	48
 #define INIT_ORDER_ECONOMY			40
 #define INIT_ORDER_OUTPUTS			35
+#define INIT_ORDER_ECHELON			31
 #define INIT_ORDER_ATOMS			30
 #define INIT_ORDER_LANGUAGE			25
 #define INIT_ORDER_MACHINES			20
@@ -167,7 +168,6 @@
 #define INIT_ORDER_OVERLAY			-7
 #define INIT_ORDER_XKEYSCORE		-10
 #define INIT_ORDER_STICKY_BAN		-10
-#define INIT_ORDER_ECHELON			-10
 #define INIT_ORDER_LIGHTING			-20
 #define INIT_ORDER_SHUTTLE			-21
 #define INIT_ORDER_BACKROOMS		-30 // relies on basically everything to be initialized first

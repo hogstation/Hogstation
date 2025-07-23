@@ -92,7 +92,7 @@ SUBSYSTEM_DEF(echelon)
 	*/
 	var/val = get_ip_intel(ip)
 	var/rating_bad = CONFIG_GET(number/ipintel_rating_bad)
-	message_admins(val, rating_bad)
+	log_access(val, rating_bad)
 	return rating_bad < val
 		
 

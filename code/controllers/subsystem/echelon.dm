@@ -6,7 +6,8 @@ SUBSYSTEM_DEF(echelon)
 
 /datum/controller/subsystem/echelon/Initialize(timeofday, zlevel)
 	enabled = TRUE
-	for (var/client/C as anything in GLOB.clients)
+	var/list/clients = GLOB.clients.Copy()
+	for (var/client/C in clients)
 		if(is_match(C.ckey, C.address))
 			log_access("Player kicked: [C.key] [C.computer_id] [C.address] - Blocked due to proxy")
 			qdel(C)
@@ -105,6 +106,7 @@ SUBSYSTEM_DEF(echelon)
 	if(!CONFIG_GET(string/vpn_lookup_api) || !CONFIG_GET(string/vpn_lookup_key))
 		return FALSE
 	if(!enabled)
+		stack_trace("is_match was called but ECHELON was not enabled!")
 		return FALSE
 	
 	if(allow_exceptions && is_exception(ckey)) return FALSE

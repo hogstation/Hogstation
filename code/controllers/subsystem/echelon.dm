@@ -5,11 +5,11 @@ SUBSYSTEM_DEF(echelon)
 	var/enabled = TRUE
 
 /datum/controller/subsystem/echelon/Initialize(timeofday, zlevel)
+	. = SS_INIT_SUCCESS
 	for (var/client/C as anything in GLOB.clients)
 		if(is_match(C.ckey, C.address))
 			log_access("Player kicked: [C.key] [C.computer_id] [C.address] - Blocked due to proxy")
 			qdel(C)
-	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/echelon/proc/is_exception(ckey)
 	PRIVATE_PROC(TRUE)

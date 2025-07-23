@@ -98,7 +98,7 @@ SUBSYSTEM_DEF(echelon)
 	*/
 	var/datum/ipintel/val = get_ip_intel(ip)
 	var/rating_bad = CONFIG_GET(number/ipintel_rating_bad)
-	log_access(val.intel, rating_bad)
+	log_access(val.intel, ip_intel_query(ip))
 	return rating_bad < val.intel
 		
 

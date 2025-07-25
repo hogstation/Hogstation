@@ -9,7 +9,7 @@ SUBSYSTEM_DEF(echelon)
 	enabled = TRUE
 	for (var/client/C)
 		log_access("ECHELON: [C]")
-		if(is_match(C.ckey, C.address))
+		if(SSechelon.is_match(C.ckey, C.address))
 			log_access("Player kicked: [C.key] [C.computer_id] [C.address] - Blocked due to proxy")
 			qdel(C)
 	log_access("ECHELON initialization ended")

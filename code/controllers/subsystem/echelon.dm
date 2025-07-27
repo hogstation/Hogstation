@@ -2,11 +2,10 @@ SUBSYSTEM_DEF(echelon)
 	name = "ECHELON"
 	init_order = INIT_ORDER_ECHELON
 	flags = SS_NO_FIRE
-	var/enabled = FALSE
+	var/enabled = TRUE
 
 /datum/controller/subsystem/echelon/Initialize(timeofday, zlevel)
 	log_access("ECHELON initialization started")
-	enabled = TRUE
 	for (var/client/C)
 		log_access("ECHELON: [C]")
 		if(SSechelon.is_match(C.ckey, C.address))

@@ -73,7 +73,6 @@
 			)
 			query_add_ip_intel.Execute()
 			qdel(query_add_ip_intel)
-	. = res
 
 
 /proc/ip_intel_query(ip, retryed=0)

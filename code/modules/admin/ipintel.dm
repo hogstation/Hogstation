@@ -85,7 +85,12 @@
 	if (!SSipintel.enabled)
 		return
 
-	var/list/http[] = world.Export("http://[CONFIG_GET(string/ipintel_domain)]/check.php?ip=[ip]&contact=[CONFIG_GET(string/ipintel_email)]&format=json&flags=f")
+	var/datum/http_request/http = new()
+	http.prepare(RUSTG_HTTP_METHOD_GET, "http://[CONFIG_GET(string/ipintel_domain)]/check.php?ip=[ip]&contact=[CONFIG_GET(string/ipintel_email)]&format=json&flags=f")
+	http.begin_async()
+	UNTIL(http.is_complete())
+	http = http.into_response()
+	//var/list/http[] = world.Export("http://[CONFIG_GET(string/ipintel_domain)]/check.php?ip=[ip]&contact=[CONFIG_GET(string/ipintel_email)]&format=json&flags=f")
 
 	if (http)
 		var/status = text2num(http["STATUS"])

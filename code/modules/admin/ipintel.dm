@@ -96,7 +96,7 @@
 		var/status = text2num(res.status_code)
 
 		if (status == 200)
-			var/response = json_decode(file2text(res.body))
+			var/response = json_decode(res.body)
 			if (response)
 				if (response["status"] == "success")
 					var/intelnum = text2num(response["result"])

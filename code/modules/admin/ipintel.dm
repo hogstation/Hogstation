@@ -93,7 +93,7 @@
 	//var/list/http[] = world.Export("http://[CONFIG_GET(string/ipintel_domain)]/check.php?ip=[ip]&contact=[CONFIG_GET(string/ipintel_email)]&format=json&flags=f")
 
 	if (http)
-		var/status = text2num(http["STATUS"])
+		var/status = text2num(http.status_code)
 
 		if (status == 200)
 			var/response = json_decode(file2text(http["CONTENT"]))

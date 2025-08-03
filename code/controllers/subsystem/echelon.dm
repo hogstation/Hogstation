@@ -1,17 +1,10 @@
 SUBSYSTEM_DEF(echelon)
 	name = "ECHELON"
 	init_order = INIT_ORDER_ECHELON
-	flags = SS_NO_FIRE
+	flags = SS_NO_FIRE | SS_NO_INIT
 	var/enabled = TRUE
 
 /datum/controller/subsystem/echelon/Initialize(timeofday, zlevel)
-	log_access("ECHELON initialization started")
-	for (var/client/C)
-		log_access("ECHELON: [C]")
-		if(world.IsBanned(C.ckey, C.address, C.computer_id))
-			log_access("Player kicked: [C.key] [C.computer_id] [C.address] - Blocked due to proxy")
-			qdel(C)
-	log_access("ECHELON initialization ended")
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/echelon/proc/is_exception(ckey)
@@ -99,7 +92,6 @@ SUBSYSTEM_DEF(echelon)
 	*/
 	var/datum/ipintel/val = get_ip_intel(ip)
 	var/rating_bad = CONFIG_GET(number/ipintel_rating_bad)
-	log_access(val.intel, num2text(ip_intel_query(ip)))
 	return rating_bad < val.intel
 		
 
@@ -107,7 +99,6 @@ SUBSYSTEM_DEF(echelon)
 	if(!CONFIG_GET(string/vpn_lookup_api) || !CONFIG_GET(string/vpn_lookup_key))
 		return FALSE
 	if(!enabled)
-		stack_trace("is_match was called but ECHELON was not enabled!")
 		return FALSE
 	
 	if(allow_exceptions && is_exception(ckey)) return FALSE

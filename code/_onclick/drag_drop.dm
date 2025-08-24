@@ -98,8 +98,6 @@
 	var/drag_start = 0
 	//The params we were passed at the start of the drag, in list form
 	var/list/drag_details
-	//Turns off BYOND hub authentication while its inaccessible
-	authenticate = 0
 
 /client/MouseDown(datum/object, location, control, params)
 	if(!control)

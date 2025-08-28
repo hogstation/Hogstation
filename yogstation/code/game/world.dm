@@ -38,6 +38,9 @@ GLOBAL_LIST_EMPTY(donators)
 
 	//BASIC SHIT
 	var/s = ""
+	var/server_name = CONFIG_GET(string/servername)
+	if (server_name)
+		s += "<b>[server_name]</b>\]"
 	s += "<br>By and for former community members of Yogstation (Note: Different staff and management)"
 	s += "<br>Time: <b>[gameTimestamp("hh:mm")]</b> | Map: <b>[SSmapping?.config?.map_name || "Unknown"]</b> | Alert: <b>[capitalize(SSsecurity_level.get_current_level_as_text())]</b>"
 

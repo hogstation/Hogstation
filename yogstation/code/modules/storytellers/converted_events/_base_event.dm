@@ -259,6 +259,10 @@
 	while(length(weighted_candidates) && length(candidates) < antag_count) //we pick_n_take from weighted_candidates so this should be fine
 		var/client/picked_client = pick_n_take_weighted(weighted_candidates)
 
+		if(!picked_client)
+			picked_client = pick(cliented_list)
+			weighed_candidates -= weighted_candidates[picked_client]
+
 		if(!picked_client || QDELETED(picked_client) || !istype(picked_client)) //sanity check
 			continue
 

@@ -261,7 +261,7 @@
 
 		if(!picked_client)
 			picked_client = pick(cliented_list)
-			weighed_candidates -= weighted_candidates[picked_client]
+			weighted_candidates -= weighted_candidates[picked_client]
 
 		if(!picked_client || QDELETED(picked_client) || !istype(picked_client)) //sanity check
 			continue

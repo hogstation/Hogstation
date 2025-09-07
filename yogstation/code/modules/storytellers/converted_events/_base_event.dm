@@ -280,6 +280,8 @@
 				poll_time = 20 SECONDS,
 				group = list(picked_mob)
 			)
+			if(!length(candidates)) // No candidates, don't prompt anymore
+				break
 		else
 			candidates |= picked_mob
 

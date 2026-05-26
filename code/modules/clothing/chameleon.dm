@@ -153,7 +153,7 @@
 	var/copying = FALSE
 	var/in_use = FALSE
 
-/datum/action/cooldown/chameleon_copy/InterceptClickOn(mob/living/caller, params, atom/target)
+/datum/action/cooldown/chameleon_copy/InterceptClickOn(mob/living/caller_but_not_a_byond_built_in_proc, params, atom/target)
 	click_with_power(target)
 
 /datum/action/cooldown/chameleon_copy/Grant(mob/M)

@@ -1,9 +1,0 @@
-author: "Oblisk234"
-delete-after: true 
-changes: 
-  - rscadd: "Enabled the infiltrators event to spawn syndicate infiltrators."
-  - tweak: "Syndicate infiltrators now have 10TC per infiltrator instead of 20TC."
-  - bugfix: "Fixed issues with the chameleon hardsuit not working."
-  - bugfix: "Syndicate PDAs can now download apps from both the infiltrator and nuclear operative bases."
-  - rscadd: "Chameleon kits can now copy other people."
-  - mapping: "Adds a surgery dufflebag in the infiltrator cutter."

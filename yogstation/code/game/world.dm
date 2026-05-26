@@ -40,10 +40,9 @@ GLOBAL_LIST_EMPTY(donators)
 	var/s = ""
 	var/server_name = CONFIG_GET(string/servername)
 	if (server_name)
-		s += "<b>[server_name]</b>\] &#8212; Dive in Now: Perfect for Beginners!"
-	s += "<br>99% Lag-Free | New Player Friendly | Active Community"
+		s += "<b>[server_name]</b>\]"
+	s += "<br>By and for former community members of Yogstation (Note: Different staff and management)"
 	s += "<br>Time: <b>[gameTimestamp("hh:mm")]</b> | Map: <b>[SSmapping?.config?.map_name || "Unknown"]</b> | Alert: <b>[capitalize(SSsecurity_level.get_current_level_as_text())]</b>"
-	s += "<br>\[<a href=\"https://yogstation.net/\">Website</a>" // link to our website so they can join forums + discord from here
 
 	//As of October 27th, 2023 taglines.txt is no longer used in the status because we never had the characters to spare it, so it would put 2-3 random characters at the end and look bad.
 

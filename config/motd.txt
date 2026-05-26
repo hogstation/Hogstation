@@ -1,15 +1,12 @@
-<h1 style="font-family: Verdana; margin: 0px; padding: 0px; text-align: center;">Welcome to Yogstation 13!</h1><br>
-<span style="font-family: Verdana; margin: 0px; padding: 0px;">We have a support ticket system at Yogstation. If you have an issue, please file a ticket by pressing <b>F1</b> or going to the <b>admin tab</b> and clicking <b>Ahelp</b>. An admin will help you as soon as possible.</span><br>
-<span style="font-family: Verdana; margin: 0px; padding: 0px;">We are constantly seeking dedicated new <span style="font-weight: bold; color: #dd4400;">admins</span>, <span style="font-weight: bold; color: #dd4400;">coders</span>, <span style="font-weight: bold; color: #dd4400;">spriters</span>, <span style="font-weight: bold; color: #dd4400;">mappers</span>, <span style="font-weight: bold; color: #dd4400;">Wiki Editors</span>, and <span style="font-weight: bold; color: #dd4400;">mentors</span> to improve our server. Without them, you wouldn't have a server to play on. If you feel you may be a good addition to our Admin or Mentor team, are interested in joining the development team, or would like to get involved with editing the Wiki, please see the links listed below.</span><br>
+<h1 style="font-family: Courier; margin: 0px; padding: 0px; text-align: center;">Welcome to HogStation!</h1><br>
+<span style="font-family: Verdana; margin: 0px; padding: 0px;">If you need to report a problem to the server administrators, press <b>F1</b> or go to the <b>admin tab</b> and click <b>Ahelp</b>.</span><br><br>
+<span style="font-family: Verdana; margin: 0px; padding: 0px;">If you need help learning how to play, press <b>F2</b> or go to the <b>mentor tab</b> and click <b>Mhelp</b>.</span><br><br>
+<span style="font-family: Verdana; margin: 0px; padding: 0px;">Speaking of staff, as a newly-minted server rising from the ashes of <b>Yogstation 13</b>, we are in need of <span style="font-weight: bold; color: #dd4400;">admins</span>, <span style="font-weight: bold; color: #dd4400;">coders</span>, <span style="font-weight: bold; color: #dd4400;">spriters</span>, and <span style="font-weight: bold; color: #dd4400;">mentors</span> to build our server. Preference will be given first to former Yogstation staff and then to their players, but all are welcome to apply. If you'd like to help out or simply hang out, please see the links listed below:</span><br><br>
+<span style="font-family: Verdana; margin: 0px; padding: 0px;">We host on a non-24/7 basis, so please join the Discord to know on what days and times that we're open.</span><br><br>
 <span style="font-family: Verdana; margin: 0px; padding: 0px;">
- ¤ <a href="https://forums.yogstation.net/form/18/select">Admin Application</a>
- ¤ <a href="https://forums.yogstation.net/form/8/select">Mentor Application</a>
- ¤ <a href="https://github.com/yogstation13/Yogstation">GitHub Repo</a>
- ¤ <a href="https://wiki.yogstation.net/wiki/Guide_to_contributing_to_the_wiki">Yogstation Wiki contribution guide</a>.
-</span><br>	
-<span style="font-family: Verdana; margin: 0px; padding: 0px;">We are running a high power server and we need <a href="http://www.yogstation.net/donate">donations to keep the server running</a>. <b>Donators</b> get <i>multiple benefits</i> such as <b>fun hats</b>, <b>custom cyborg skins</b> and <b>Quiet Mode</b>!<br><br> 
-<span style="font-family: Verdana; margin: 0px; padding: 0px;">Discord: <a href="https://discord.gg/0keg6hQH05Ha8OfO">https://discord.gg/0keg6hQH05Ha8OfO</a></span><br>
-<span style="font-family: Verdana; margin: 0px; padding: 0px;">If you need to create an account on the forums please use this keyword to register: <b>assistantgreytide</b></a></span><br>
-
-
+ ¤ <a href="https://github.com/hogstation/Hogstation">GitHub Repo</a><br>
+ ¤ <a href="https://discord.gg/sJqDueFMm8">Discord</a>
+</span><br><br>
+<hr>
+<h2 style="font-family: Cursive; margin: 0px; padding: 0px; text-align: center;">"The yogging is done; let the hogging begin."</h2>
 <hr><br>

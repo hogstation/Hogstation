@@ -5,6 +5,7 @@
 	description = "Turns off the gravity generator."
 	min_wizard_trigger_potency = 0
 	max_wizard_trigger_potency = 4
+	min_players = 3 // To ease difficulty for small crews and make station feel fresher for latejoin first arrivals
 	track = EVENT_TRACK_MODERATE
 	tags = list(TAG_COMMUNAL, TAG_SPACE)
 	event_group = /datum/event_group/bsod

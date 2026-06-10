@@ -25,7 +25,8 @@
 	/// Boolean that tells us if this is a planetary station. (like IceBoxStation)
 	var/planetary = FALSE
 
-	var/minetype = "jungle_and_lavaland"
+	//HOGEDIT: Jungleland is disabled.
+	var/minetype = "lavaland"
 	var/cryo_spawn = FALSE
 
 	var/allow_custom_shuttles = TRUE

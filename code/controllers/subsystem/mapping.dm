@@ -454,6 +454,9 @@ SUBSYSTEM_DEF(mapping)
 		LoadGroup(FailedZs, "Lavaland", "map_files/mining", "Lavaland.dmm", default_traits = ZTRAITS_LAVALAND) //Yogs, yoglavaland
 		GLOB.minetype = MINETYPE_LAVALAND
 	//Yogs begin, jungleland gen
+	
+	//HOGEDIT: Jungleland is disabled on the default config, so the only way to enable it would be through map-specific minetype configs.
+
 	else if(config.minetype == "jungleland")
 		LoadGroup(FailedZs, "Jungleland", "map_files/mining", "Jungleland.dmm", default_traits = ZTRAITS_JUNGLELAND)
 		GLOB.minetype = MINETYPE_JUNGLE

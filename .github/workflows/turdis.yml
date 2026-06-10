@@ -14,7 +14,7 @@ on:
 jobs:
   lint:
     name: Lints
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
 
@@ -82,7 +82,7 @@ jobs:
 
   compile:
     name: Compile All Maps
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
 
@@ -114,7 +114,7 @@ jobs:
   find_all_maps:
     if: "!contains(github.event.head_commit.message, '[ci skip]')"
     name: Find Maps to Test
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     outputs:
       maps: ${{ steps.map_finder.outputs.maps }}
     steps:
@@ -128,7 +128,7 @@ jobs:
           echo "maps={\"paths\":[$(cat maps_output.txt)]}" >> $GITHUB_OUTPUT
   test:
     name: Compile and Run Tests
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     needs: [find_all_maps]
     strategy:
       fail-fast: false
@@ -151,7 +151,7 @@ jobs:
         run: |
           sudo dpkg --add-architecture i386
           sudo apt-get update
-          sudo apt install libstdc++6:i386 gcc-multilib g++-7 g++-7-multilib zlib1g:i386 libssl1.1 libssl1.1:i386
+          sudo apt install libstdc++6:i386 gcc-multilib g++-10 g++-10-multilib zlib1g:i386 libssl3 libssl3:i386
 
       - name: Restore Cache BYOND
         uses: actions/cache@v4
